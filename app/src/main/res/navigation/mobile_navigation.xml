@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_tests">
+
+    <fragment
+        android:id="@+id/navigation_tests"
+        android:name="com.omidmsl.multiplyanddivisiononline.ui.test.TestsFragment"
+        android:label="@string/title_tests"
+        tools:layout="@layout/fragment_tests">
+
+        <action
+            android:id="@+id/action_TestsFragment_to_TestOptionsFragment"
+            app:destination="@id/navigation_home_second" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_home_second"
+        android:name="com.omidmsl.multiplyanddivisiononline.ui.test.TestOptionsFragment"
+        android:label="@string/home_second"
+        tools:layout="@layout/fragment_test_options">
+        <action
+            android:id="@+id/action_TestOptionsFragment_to_TestsFragment"
+            app:destination="@id/navigation_tests" />
+
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_user_info"
+        android:name="com.omidmsl.multiplyanddivisiononline.ui.userInfo.UserInfoFragment"
+        android:label="@string/title_user_info"
+        tools:layout="@layout/fragment_user_info" />
+
+    <fragment
+        android:id="@+id/navigation_conversation"
+        android:name="com.omidmsl.multiplyanddivisiononline.ui.conversation.ConversationFragment"
+        android:label="@string/title_conversation"
+        tools:layout="@layout/fragment_conversation" />
+</navigation>

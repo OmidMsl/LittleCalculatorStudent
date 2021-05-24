@@ -1,0 +1,2 @@
+rootProject.name='Multiply And Division Online'
+include ':app'

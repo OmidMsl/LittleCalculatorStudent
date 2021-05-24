@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_1">
+
+    <fragment
+        android:id="@+id/nav_1"
+        android:name="com.omidmsl.multiplyanddivisiononline.firstenter.FirstEnter1Fragment"
+        android:label="ورود"
+        tools:layout="@layout/fragment_first_enter_1">
+        <action
+            android:id="@+id/action_nav_1_to_nav_2"
+            app:destination="@id/nav_2"
+            app:enterAnim="@anim/animation_enter"
+            app:exitAnim="@anim/animation_exit"
+            app:popEnterAnim="@anim/animation_pop_enter"
+            app:popExitAnim="@anim/animation_pop_exit" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_2"
+        android:name="com.omidmsl.multiplyanddivisiononline.firstenter.FirstEnter2Fragment"
+        android:label="ورود"
+        tools:layout="@layout/fragment_first_enter_2">
+        <action
+            android:id="@+id/action_nav_2_to_nav_3"
+            app:destination="@id/nav_3"
+            app:enterAnim="@anim/animation_enter"
+            app:exitAnim="@anim/animation_exit"
+            app:popEnterAnim="@anim/animation_pop_enter"
+            app:popExitAnim="@anim/animation_pop_exit" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_3"
+        android:name="com.omidmsl.multiplyanddivisiononline.firstenter.FirstEnter3Fragment"
+        android:label="ورود"
+        tools:layout="@layout/fragment_first_enter_3">
+    </fragment>
+
+</navigation>
